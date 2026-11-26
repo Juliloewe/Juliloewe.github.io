@@ -1,0 +1,440 @@
+/*Warum ist gap praktischer als margin auf jeder Karte */
+/* gap erstellt automatisch einen Abstand zwischen jedem Element. Mit margin muss ich das für jeden Elementtyp machen.
+So sind außerdem alle Abstände gleich groß (will man meistens). */
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    min-width: 200px;
+    /*So stelle ich ein, dass die Webseite ab 200px nur mehr rauszoomt, anstatt die Elemente für
+       eine sehr kleine Größe optimieren zu müssen. Ich hoffe mal, keiner hat einen so kleine Pixelanzahl.*/
+}
+
+h1 {
+    color: black;
+    text-align: center;
+    font-size: 2rem;
+}
+
+h2 {
+    color: black;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.Hobbys {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+    column-gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 0.5rem;
+    padding: 2rem;
+
+    img {
+        background-color: rgb(90, 90, 90);
+        border: 0;
+        padding: 0;
+        box-shadow: -0.5rem 1rem 1.5rem rgb(100, 100, 100);
+        border: 2px solid gray;
+    }
+
+    p {
+        background-color: rgb(240, 240, 240);
+        box-shadow: -0.5rem 1rem 1.5rem rgb(100, 100, 100);
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+        border: 2px solid gray;
+    }
+
+    h3 {
+        background-color: rgb(240, 240, 240);
+        box-shadow: -0.5rem 1rem 1.5rem rgb(100, 100, 100);
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+        border: 2px solid gray;
+    }
+
+    img:hover {
+        background-color: rgb(90, 90, 90);
+        border: 0;
+        padding: 0;
+        box-shadow: -0.5rem 1rem 1.5rem darkblue;
+        border: 2px solid blue;
+    }
+
+    p:hover {
+        background-color: rgb(240, 240, 240);
+        box-shadow: -0.5rem 1rem 1.5rem darkblue;
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+        border: 2px solid blue;
+    }
+
+    h3:hover {
+        background-color: rgb(240, 240, 240);
+        box-shadow: -0.5rem 1rem 1.5rem darkblue;
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+        border: 2px solid blue;
+    }
+}
+
+.Fotogalerie {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0.3rem;
+}
+
+.featuredFotogalerie {
+    grid-column: span 2;
+}
+
+p {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.Julian {
+    margin: 0;
+    width: 50px;
+}
+
+.Julian_text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.4rem;
+}
+
+#Schullaufbahn {
+    margin: 0 auto;
+}
+
+a {
+    display: block;
+    background-color: white;
+    color: black;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    text-align: center;
+    margin: 0.2rem auto;
+    text-decoration: none;
+    border: 1px solid black;
+    width: fit-content;
+    height: auto;
+}
+
+a:hover {
+    display: block;
+    background-color: white;
+    color: blue;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    text-align: center;
+    border: 1px solid blue;
+    margin: 0.2rem auto;
+    text-decoration: underline;
+    width: fit-content;
+    height: auto;
+}
+
+img {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    display: block;
+    height: auto;
+    border-radius: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Navigationslinks {
+    font-size: 0.3rem;
+    padding: 0.2rem;
+}
+
+.Navigationslinks:hover {
+    font-size: 0.3rem;
+    padding: 0.2rem;
+}
+
+.Navigationsbuttons {
+    gap: 0 0.3rem;
+}
+
+.Navigationsname {
+    font-size: 0.7rem;
+}
+
+div {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+table {
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th {
+    font-size: 0.6rem;
+    border: 1px solid black;
+    padding: 0.5rem;
+}
+
+td {
+    font-size: 0.3rem;
+    border: 1px solid black;
+    padding: 0.5rem;
+}
+
+/* Handy: Standard */
+main {
+    padding: 0 1rem;
+    margin: 0 auto;
+}
+
+
+@media (min-width: 220px) {
+    .Navigationsname {
+        font-size: 0.7rem;
+    }
+
+    .Navigationslinks {
+        font-size: 0.3rem;
+    }
+
+    .Navigationslinks:hover {
+        font-size: 0.3rem;
+    }
+}
+
+@media (min-width: 285px) {
+    th {
+        font-size: 0.8rem;
+    }
+
+    td {
+        font-size: 0.5rem;
+    }
+}
+
+@media (min-width: 300px) {
+    th {
+        font-size: 1rem;
+    }
+
+    td {
+        font-size: 0.7rem;
+    }
+
+    .Navigationsname {
+        font-size: 1rem;
+    }
+
+    .Navigationslinks {
+        font-size: 0.5rem;
+        padding: 0.4rem;
+    }
+
+    .Navigationslinks:hover {
+        font-size: 0.5rem;
+        padding: 0.4rem;
+    }
+
+    .Hobbys {
+        font-size: 0.7rem;
+    }
+
+    .Julian {
+        width: 100px;
+    }
+
+    .Julian_text {
+        font-size: 0.7rem;
+    }
+}
+
+@media (min-width: 420px) {
+    th {
+        font-size: 1.5rem;
+    }
+
+    td {
+        font-size: 1rem;
+    }
+
+    .Julian_text {
+        font-size: 1rem;
+    }
+
+    .Navigationsname {
+        font-size: 1.5rem;
+    }
+
+    .Navigationslinks {
+        font-size: 1rem;
+        padding: 0.5rem
+    }
+
+    .Navigationslinks:hover {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+
+    .Hobbys {
+        font-size: 1rem;
+    }
+}
+
+/* ab Tablet */
+@media (min-width: 600px) {
+    main {
+        padding: 0 2rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    th {
+        font-size: 2rem;
+    }
+
+    td {
+        font-size: 1.5rem;
+    }
+
+    .Navigationslinks {
+        font-size: 1.5rem;
+    }
+
+    .Navigationslinks:hover {
+        font-size: 1.5rem;
+    }
+
+    .Navigationsbuttons {
+        gap: 0 0.5rem;
+    }
+
+    .Navigationsname {
+        font-size: 2rem;
+    }
+
+    .Julian_text {
+        font-size: 1.5rem;
+    }
+
+    .Julian {
+        width: 200px;
+    }
+
+    .Hobbys {
+        font-size: 0.4rem;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .Fotogalerie {
+        gap: 0.5rem;
+    }
+}
+
+@media (min-width: 700px) {
+    .Hobbys {
+        font-size: 0.5rem;
+    }
+}
+
+@media (min-width: 800px) {
+    .Hobbys {
+        font-size: 0.75rem;
+    }
+}
+
+@media (min-width: 900px) {
+    main {
+        padding: 0 2rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    th {
+        font-size: 2rem;
+    }
+
+    td {
+        font-size: 1.5rem;
+    }
+
+    .Navigationslinks {
+        font-size: 1.5rem;
+    }
+
+    .Navigationslinks:hover {
+        font-size: 1.5rem;
+    }
+
+    .Julian_text {
+        font-size: 1.5rem;
+    }
+
+    .Hobbys {
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 1000px) {
+    .Hobbys {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 1100px) {
+    .Hobbys {
+        font-size: 1.2rem;
+        grid-template-columns: 1.5fr 1.5fr 2fr 2fr
+    }
+}
+
+@media (min-width: 1300px) {
+    .Hobbys {
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    .Hobbys {
+        font-size: 1.4rem;
+        grid-template-columns: 1fr 1fr 2fr 2fr;
+    }
+}
+
+@media (min-width: 1500px) {
+    .Hobbys {
+        font-size: 1.5rem;
+    }
+}
+
